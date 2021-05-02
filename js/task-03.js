@@ -22,13 +22,17 @@ const galleryImages = images.map((image) => {
 }).join(' ');
 
 myList.insertAdjacentHTML("beforeend", galleryImages);
-myList.style.display = "flex";
+myList.style.display = 'flex'
+myList.style.listStyleType = 'none'
+
+
 const myImgs = document.querySelectorAll('img');
 console.log(myImgs)
 
 myImgs.forEach(element=>{
   element.style.width = '400px'
   element.style.height = '300px'
+  element.style.marginLeft = '20px'
 })
 
 
