@@ -17,23 +17,19 @@ const images = [
 ];
 
 const myList = document.querySelector("#gallery");
-const galleryImages = images.map((image) => {
-  return `<li><img alt ="${image.alt}" src ="${image.url}"></li>`;
-}).join(' ');
+const galleryImages = images
+  .map((image) => {
+    return `<li><img alt ="${image.alt}" src ="${image.url}"></li>`;
+  })
+  .join(" ");
 
 myList.insertAdjacentHTML("beforeend", galleryImages);
-myList.style.display = 'flex'
-myList.style.listStyleType = 'none'
+myList.style.display = "flex";
+myList.style.listStyleType = "none";
 
-
-const myImgs = document.querySelectorAll('img');
-console.log(myImgs)
-
-myImgs.forEach(element=>{
-  element.style.width = '400px'
-  element.style.height = '300px'
-  element.style.marginLeft = '20px'
-})
-
-
-
+const myImgs = document.querySelectorAll("img");
+myImgs.forEach((element) => {
+  element.style.width = "400px";
+  element.style.height = "300px";
+  element.style.marginLeft = "20px";
+});
